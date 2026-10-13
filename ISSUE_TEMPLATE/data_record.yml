@@ -1,0 +1,40 @@
+name: Add or update an anchor record
+description: Propose a sourced registry record for an anchor, or an update to an existing one.
+title: "[Data]: "
+labels: ["type:data", "area:data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read the [data policy](https://github.com/corridor-finder/corridor-finder-registry/blob/main/docs/DATA_POLICY.md) first. Records without sources for every fact will be closed.
+  - type: input
+    id: anchor
+    attributes:
+      label: Anchor name and home domain
+      placeholder: Example Anchor, anchor.example.com
+    validations:
+      required: true
+  - type: input
+    id: countries
+    attributes:
+      label: Countries covered
+      description: ISO 3166-1 alpha-2 codes.
+      placeholder: NG, KE
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: For each fact (assets, currencies, rails, fees, limits), the exact public URL and the date you checked it.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: I opened every source and it says what I am claiming.
+          required: true
+        - label: I am not guessing or estimating any value.
+          required: true

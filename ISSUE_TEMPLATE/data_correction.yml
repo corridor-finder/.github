@@ -1,0 +1,25 @@
+name: Data correction
+description: A registry record is wrong, outdated or misleading.
+title: "[Correction]: "
+labels: ["type:data", "area:data"]
+body:
+  - type: input
+    id: record
+    attributes:
+      label: Record id
+      description: The file name without .yaml, for example `example-anchor`.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Public URLs that show the correct information and the date you checked them.
+    validations:
+      required: true

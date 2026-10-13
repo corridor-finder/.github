@@ -1,0 +1,22 @@
+area:data	0e8a16	Registry data and schema
+area:api	1d76db	NestJS API and verifiers
+area:web	5319e7	Next.js web app
+area:docs	0075ca	Documentation
+area:ci	fbca04	CI and tooling
+area:contracts	b60205	Soroban contracts
+type:feature	a2eeef	New functionality
+type:bug	d73a4a	Something is broken
+type:data	c2e0c6	Data records and corrections
+type:docs	0075ca	Documentation only
+type:chore	ededed	Maintenance with no user-facing change
+type:test	bfd4f2	Tests only
+difficulty:trivial	c5def5	Proposed Wave complexity: trivial (100 pts). Set in Drips app
+difficulty:medium	7fb3e6	Proposed Wave complexity: medium (150 pts). Set in Drips app
+difficulty:high	1d4f91	Proposed Wave complexity: high (200 pts). Set in Drips app
+status:ready	0e8a16	Scoped and open to claim
+status:blocked	b60205	Waiting on another issue
+status:needs-design	d4c5f9	Needs a decision before work starts
+status:needs-info	fef2c0	Waiting for more information
+good first issue	7057ff	Good for first-time contributors
+help wanted	008672	Extra attention is welcome
+Stellar Wave	ff7b00	Issues in the Stellar Wave program (Drips reads this label)

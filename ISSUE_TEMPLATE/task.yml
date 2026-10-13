@@ -1,0 +1,98 @@
+name: Contributor task
+description: A well-scoped unit of work a contributor can pick up and finish (maintainers use this for Drips Wave issues).
+title: "[Task]: "
+labels: ["type:feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A good task is understandable without any other context, small enough to finish in a few days, and has acceptance criteria a reviewer can check. If it is vague, it will not be picked up.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What needs to be built
+      description: One or two sentences, concrete. "Implement corridor search by origin and destination country", not "improve search".
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+      description: How this serves the product (see the MVP in the hub repository).
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What is in scope, and what is explicitly out of scope.
+      placeholder: |
+        In scope:
+        - ...
+        Out of scope:
+        - ...
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected behavior
+      description: What a user or caller sees when it works, including empty, error and "unavailable" states. Remember we never fabricate data.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: A checklist a reviewer can verify one by one.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: testing
+    attributes:
+      label: Testing requirements
+      description: Which tests must exist (unit, integration, e2e) and what they must cover.
+    validations:
+      required: true
+  - type: textarea
+    id: docs
+    attributes:
+      label: Documentation requirements
+      description: Docs, README sections or env-variable tables that must be updated. Write "none" if none.
+    validations:
+      required: true
+  - type: textarea
+    id: location
+    attributes:
+      label: Where it belongs
+      description: Repository, directories, files or components to start from, if known.
+    validations:
+      required: false
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Issues or PRs that must be merged first (link them), or "none".
+    validations:
+      required: true
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Complexity
+      description: Proposed level and points are Trivial 100, Medium 150, High 200. Drips does not read this field. Issues labelled only on GitHub default to Trivial, so the maintainer must set the real level in the Drips app.
+      options:
+        - Trivial
+        - Medium
+        - High
+    validations:
+      required: true
+  - type: textarea
+    id: complexity-reason
+    attributes:
+      label: Why this complexity
+      description: One or two sentences (new design decisions? several modules touched? correctness-critical?).
+    validations:
+      required: true
